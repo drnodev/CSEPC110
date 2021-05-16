@@ -13,21 +13,21 @@ child_number    = int(input("How many children are there? "))
 adult_number    = int(input("How many adults are there? "))
 tax_rate        = float(input("What is the sales tax rate? "))
 subtotal        = (child_number * child_price) + (adult_number * adult_price)
-sales_tax       = subtotal * (sales_tax / 100)
+sales_tax       = subtotal * (tax_rate / 100)
 total           = subtotal + sales_tax
 
 #print results
-print(f"Subtotal: ${subtotal:.2f}")
+print(f"\nSubtotal: ${subtotal:.2f}")
 print(f"Sales Tax: ${sales_tax:.2f}")
 print(f"Total: ${total:.2f}")
 
-payment         = float(input("What is the payment amount? "))
+payment         = float(input("\nWhat is the payment amount? "))
 
-print(f"Change: ${payment-total}") 
+print(f"Change: ${payment-total:.2f}") 
 
 
-yes_no = input("Did you enjoy your meal? (Y/N) ")
+yes_no = input("\nDid you enjoy your meal? (Yes/No) ")
 starts = int(input("Give us your opinion, how many stars would you give to this restaurant? "))
 
-print(f"The customer rated the restaurant with {starts} stars")
+print(f"\nThe customer rated the restaurant with {starts} stars")
 print(f"The customer enjoyed his meal: {yes_no}")
